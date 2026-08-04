@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "package": {
+    "name": "日志增强",
+    "version": "1.2.1",
+    "authors": ["檀轶步棋", "JustAnotherID", "BegoniaHe", "星·麒"],
+    "license": "MIT",
+    "description": "为 .log 指令提供结束定位、分段计时与跑团书签。",
+    "homepage": "https://github.com/BegoniaStar/sealdice-log-enhanced"
+  },
+  "build": {
+    "entry": "src/index.ts",
+    "ecmaTarget": "es6",
+    "bundleFileName": "sealdice-log-enhanced.js"
+  },
+  "sealDice": {
+    "buildTarget": ["1.6.0"],
+    "defaultTarget": "1.6.0"
+  },
+  "release": {
+    "directory": "release",
+    "checksum": "sha256",
+    "artifactPolicy": {
+      "forbiddenPaths": [],
+      "forbiddenExtensions": []
+    }
+  },
+  "sealpack": {
+    "packageId": "BegoniaHe/sealdice-log-enhanced",
+    "minSealDice": "1.6.0",
+    "contents": {
+      "scripts": {
+        "bundle": true,
+        "path": "scripts/sealdice-log-enhanced.js"
+      }
+    },
+    "dependencies": {},
+    "permissions": {
+      "network": false,
+      "networkHosts": [],
+      "acknowledgeUnrestrictedNetwork": false,
+      "fileRead": [],
+      "fileWrite": [],
+      "dangerous": false,
+      "httpServer": false,
+      "ipc": []
+    },
+    "readme": "README.md",
+    "assets": [],
+    "store": {
+      "category": "tool",
+      "icon": "",
+      "banner": "",
+      "screenshots": []
+    }
+  }
+}

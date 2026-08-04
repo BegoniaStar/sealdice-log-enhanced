@@ -1,0 +1,17 @@
+#!/bin/sh
+# Project-local, lockfile-pinned SealDice extension workflow.
+set -eu
+
+project_dir=$(CDPATH='' cd -P "$(dirname "$0")" && pwd -P)
+wrapper="$project_dir/node_modules/.bin/sealwrapper"
+
+if [ ! -x "$wrapper" ]; then
+  printf '%s\n' 'sealw: sealwrapper is not installed; run npm ci first' >&2
+  exit 2
+fi
+
+if command -v mise >/dev/null 2>&1; then
+  exec mise exec -- "$wrapper" "$@"
+fi
+
+exec "$wrapper" "$@"

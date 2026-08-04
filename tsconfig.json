@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "strict": true,
+    "target": "ES2024",
+    "types": [],
+    "verbatimModuleSyntax": true
+  },
+  "include": ["src/**/*.ts", ".seal/types/sealdice-1.6.0.d.ts"]
+}
