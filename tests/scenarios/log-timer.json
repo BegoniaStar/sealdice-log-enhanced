@@ -1,0 +1,21 @@
+{
+  "release": true,
+  "title": "日志计时",
+  "clock": "2026-08-01T00:00:00Z",
+  "messages": [
+    { "sequence": 1, "qq": "10001", "text": ".log new 雾都" },
+    { "sequence": 2, "qq": "10001", "text": ".log off" }
+  ],
+  "expect": {
+    "outputs": [
+      {
+        "inReplyToSequence": 1,
+        "text": "日志新建失败: no such table: logs"
+      },
+      {
+        "inReplyToSequence": 2,
+        "text": "没有找到正在进行的记录，已经是关闭状态。这可能表示您忘记了开启记录。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "release": true,
+  "title": "日志增强命令",
+  "clock": "2026-08-01T00:00:00Z",
+  "messages": [
+    { "sequence": 1, "qq": "10001", "text": ".logtime info" },
+    { "sequence": 2, "qq": "10001", "text": ".logtime history" },
+    { "sequence": 3, "qq": "10001", "text": ".logtime recap" },
+    { "sequence": 4, "qq": "10001", "text": ".logmark 开场" }
+  ],
+  "expect": {
+    "outputs": [
+      {
+        "inReplyToSequence": 1,
+        "text": "未找到可供查看的日志计时记录。"
+      },
+      {
+        "inReplyToSequence": 2,
+        "text": "未找到可供查看的日志计时记录。"
+      },
+      {
+        "inReplyToSequence": 3,
+        "text": "未找到可供查看的日志计时记录。"
+      },
+      {
+        "inReplyToSequence": 4,
+        "text": "当前没有正在记录的日志，无法添加书签。"
+      }
+    ]
+  }
+}

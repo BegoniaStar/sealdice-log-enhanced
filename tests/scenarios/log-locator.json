@@ -1,0 +1,21 @@
+{
+  "release": true,
+  "title": "日志定位",
+  "clock": "2026-08-01T00:00:00Z",
+  "messages": [
+    { "sequence": 1, "qq": "10001", "text": ".log off 雾都" },
+    { "sequence": 2, "qq": "10001", "text": ".log on 雾都" }
+  ],
+  "expect": {
+    "outputs": [
+      {
+        "inReplyToSequence": 1,
+        "text": "没有找到正在进行的记录，已经是关闭状态。这可能表示您忘记了开启记录。"
+      },
+      {
+        "inReplyToSequence": 2,
+        "text": "获取记录出错: no such table: logs"
+      }
+    ]
+  }
+}
